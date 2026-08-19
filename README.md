@@ -102,6 +102,10 @@ Authorization: Bearer <your-token>
 
    spring.data.redis.host=localhost
    spring.data.redis.port=6379
+   
+   # Generate with: openssl rand -base64 48
+   jwt.secret=your_generated_secret_at_least_32_characters_long
+   jwt.expiration=86400000
 
    # Keep the nightly batch job from running on every startup
    spring.batch.job.enabled=false
